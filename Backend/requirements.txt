@@ -1,0 +1,11 @@
+langchain_openai
+pandas
+langchain
+openai
+psycopg2
+python-dotenv
+langchain_postgres
+langchain_community
+
+chainlit
+pydantic==2.10.1
