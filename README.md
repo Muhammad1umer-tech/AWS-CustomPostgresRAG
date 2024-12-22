@@ -14,6 +14,8 @@ This project showcases the deployment of a custom Retrieval-Augmented Generation
     ![IAM](https://img.shields.io/badge/AWS-IAM-FF9900?style=for-the-badge&logo=amazon-iam&logoColor=white)
     ![Cloud Map](https://img.shields.io/badge/AWS-Cloud_Map-00A8E8?style=for-the-badge&logo=amazon-cloudmap&logoColor=white)
 
+## AWS Architecture
+![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/Pasted%20image%20(2).png)
 
 
 ### Key Components:
@@ -42,12 +44,17 @@ This project showcases the deployment of a custom Retrieval-Augmented Generation
   - Hosts the EC2 instance for the frontend and backend services.
 - **Two Private Subnets**: 
   - Host the RDS instance and fast availability.
+    
+![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/Pasted%20image%20(4).png)
 
 ### 2. Network Configuration
 - **Public Subnet**:
   - Internet Gateway attached to enable internet access.
 - **Private Subnets**:
   - NAT Gateway configured to allow one-way communication from the private subnet (RDS) to the internet for necessary updates.
+    
+![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/Pasted%20image%20(3).png)
+
 
 ### 3. Security Rules
 - **Inbound Rules**:
@@ -58,6 +65,12 @@ This project showcases the deployment of a custom Retrieval-Augmented Generation
   - Used to securely route frontend requests to the backend.
   - Configured with a private API to allow internal access to port `8000` through the API Gateway, ensuring secure communication.
 
+### 4. EC2 & RDS
+  - Hosts both frontend and backend services for seamless integration.
+  - RDS: Stores PostgreSQL data including vector embeddings and extracted information.
+  - RDS is placed in a private subnet with secure access, while EC2 uses a public subnet with controlled inbound rules.
+
+![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/Pasted%20image.png)
 ---
 
 ## Features
