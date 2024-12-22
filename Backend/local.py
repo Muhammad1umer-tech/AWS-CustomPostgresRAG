@@ -34,6 +34,41 @@ def document_to_response(input, content):
     return response
 
 
+def check_file():
+    file_path = os.getenv("CSV_FILE_PATH")
+    df = pd.read_csv(file_path)
+    print(df.heads())
+
+def create_db():
+    # Get connection details from environment variables
+    db_host = os.getenv('POSTGRES_ENDPOINT')
+    db_user = os.getenv('POSTGRES_USER')
+    db_password = os.getenv('POSTGRES_PASSWORD')
+    db_name = os.getenv('POSTGRES_DB')
+    db_port = os.getenv('POSTGRES_PORT', 5432)
+    print(db_host, db_user, db_password, db_name, db_port)
+    conn = psycopg2.connect(
+        host=db_host,
+        user=db_user,
+        password=db_password,
+        dbname=db_name,
+        port=db_port
+    )
+    cursor = conn.cursor()
+    cursor.execute("CREATE EXTENSION IF NOT EXISTS vector;"),
+    cursor.execute("""
+        CREATE TABLE qa_pairs (
+        questions TEXT NOT NULL,        
+        answers TEXT NOT NULL,          
+        embeddings VECTOR(1536)--);"""),
+    
+     conn.commit()
+        cursor.close()
+        conn.close()
+
+# Use the connection to interact with the database
+
+
 def create_db():
     try:    
         postgres_user = os.getenv("POSTGRES_USER")

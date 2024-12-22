@@ -9,7 +9,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins. Change to specific origins if needed.
+    allow_origins=["http://13.53.54.236:3000", "http://127.0.0.1:3000"],  # Allows all origins. Change to specific origins if needed.
     allow_credentials=True,
     allow_methods=["*"],  # Allows all HTTP methods.
     allow_headers=["*"],  # Allows all headers.
@@ -29,6 +29,10 @@ async def inputToResponse(item: Item):
     result = input_to_response(item.input)
     return JSONResponse(content={"message": result}, status_code=200)
 
+
+@app.get("/test")
+async def test():
+    return {"message": "Hello world"}
 
 # @app.post("/deletedb/", )
 # async def deletedb():
