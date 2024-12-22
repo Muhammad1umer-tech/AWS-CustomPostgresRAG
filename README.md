@@ -13,9 +13,11 @@ This project showcases the deployment of a custom Retrieval-Augmented Generation
     ![API Gateway](https://img.shields.io/badge/AWS-API_Gateway-FF4F00?style=for-the-badge&logo=amazon-api-gateway&logoColor=white)
     ![IAM](https://img.shields.io/badge/AWS-IAM-FF9900?style=for-the-badge&logo=amazon-iam&logoColor=white)
     ![Cloud Map](https://img.shields.io/badge/AWS-Cloud_Map-00A8E8?style=for-the-badge&logo=amazon-cloudmap&logoColor=white)
+    ![Eraser.io](https://img.shields.io/badge/Eraser.io-00A8E8?style=for-the-badge&logo=eraser&logoColor=white)
+
 
 ## AWS Architecture
-![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/Pasted%20image%20(2).png)
+![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/AwsArchitecture.png)
 
 
 ### Key Components:
