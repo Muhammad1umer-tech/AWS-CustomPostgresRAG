@@ -60,11 +60,11 @@ def create_db():
         CREATE TABLE qa_pairs (
         questions TEXT NOT NULL,        
         answers TEXT NOT NULL,          
-        embeddings VECTOR(1536)--);"""),
+        embeddings VECTOR(153)--);"""),
     
-     conn.commit()
-        cursor.close()
-        conn.close()
+    conn.commit()
+    cursor.close()
+    conn.close()
 
 # Use the connection to interact with the database
 
@@ -171,5 +171,5 @@ def input_to_response(input):
 
 
 create_db()    
-input_to_response("have you experience with php and laravel?")
+# input_to_response("have you experience with php and laravel?")
 
