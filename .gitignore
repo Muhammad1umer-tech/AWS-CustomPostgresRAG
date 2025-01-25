@@ -1,3 +1,7 @@
-*env
-*venv
+##Backend
+*.env
+.git
+*venv/
+*__pycache__/
+*irrelevent/
 *node_modules
