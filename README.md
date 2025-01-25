@@ -1,4 +1,4 @@
-# Custom RAG Deployment with AWS Services
+# Custom Monolithic RAG Deployment with AWS Services
 
 ## Project Overview
 
@@ -17,7 +17,7 @@ This project showcases the deployment of a custom Retrieval-Augmented Generation
 
 
 ## AWS Architecture
-![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/AwsArchitecture.png)
+![Alt Text](https://github.com/Muhammad1umer-tech/AWS-CustomPostgresRAG/blob/main/images/architecture.png)
 
 
 ### Key Components:
